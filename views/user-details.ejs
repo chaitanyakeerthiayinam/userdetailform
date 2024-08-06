@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Details</title>
+        <link rel="stylesheet" href="/detail-style.css">
+    </head>
+    <body>
+        <div class="container">
+            <a href="/user/new" class="add-user-btn">Add User</a>
+            <h1>User Details</h1>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                </tr>
+                <% users.forEach(user => { %>
+                    <tr>
+                        <td><%= user.name %></td>
+                        <td><%= user.age %></td>
+                        <td><%= user.email %></td>
+                    </tr>
+                <% }) %>
+
+            </table>
+        </div>
+    </body>
+</html>
